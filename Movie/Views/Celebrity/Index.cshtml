@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Movie.Model.Models.Celebtiry>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create"><h3>Create New</h3></a>
+</p>
+<table class="table" style="background-color:aliceblue">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CelebrityName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CelebrityActorORActress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CelebrityYearofBirth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CelebrityCountry)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CelebrityMovies)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CelebrityName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CelebrityActorORActress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CelebrityYearofBirth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CelebrityCountry)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CelebrityMovies)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CelebrityID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CelebrityID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CelebrityID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

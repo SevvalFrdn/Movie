@@ -1,0 +1,84 @@
+﻿@model IEnumerable<Movie.Model.Models.Moviee>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create"><h3>Create New</h3></a>
+</p>
+<table class="table" style="background-color:aliceblue">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MovieName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MovieReview)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MovieDirector)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MovieWriter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MovieStars)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MovieGenres)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MovieReleaseDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MovieRuntime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudioID)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MovieName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MovieReview)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MovieDirector)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MovieWriter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MovieStars)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MovieGenres)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MovieReleaseDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MovieRuntime)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.StudioID)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.MovieID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.MovieID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.MovieID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

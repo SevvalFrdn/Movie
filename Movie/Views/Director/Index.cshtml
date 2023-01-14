@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Movie.Model.Models.Director>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Director</h1>
+
+<p>
+    <a asp-action="Create"><h3>Create New</h3></a>
+</p>
+<table class="table" style="background-color:aliceblue">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DirectorName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DirectorName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.DirectorID">|
+                    <html>
+                    <head>
+                        <style>
+                            .button {
+                                border: none;
+                                color: white;
+                                padding: 10px 25px;
+                                text-align: center;
+                                text-decoration: none;
+                                display: inline-block;
+                                font-size: 16px;
+                                margin: 4px 2px;
+                                transition-duration: 0.4s;
+                                cursor: pointer;
+                            }
+
+                  
+
+                            .button2 {
+                                background-color: white;
+                                color: black;
+                                border: 2px solid #008CBA;
+                            }
+
+                                .button2:hover {
+                                    background-color: #008CBA;
+                                    color: white;
+                                }
+
+                        </style>
+                    </head>
+                    <body>
+
+                        <button class="button button2">Edit</button>
+
+                    </body>
+               
+                </html>
+                </a>
+                <a asp-action="Details" asp-route-id="@item.DirectorID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.DirectorID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

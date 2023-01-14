@@ -1,0 +1,71 @@
+﻿@model Movie.Model.Models.Moviee
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Moviee</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="MovieName" class="control-label"></label>
+                <input asp-for="MovieName" class="form-control" />
+                <span asp-validation-for="MovieName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MovieReview" class="control-label"></label>
+                <input asp-for="MovieReview" class="form-control" />
+                <span asp-validation-for="MovieReview" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MovieDirector" class="control-label"></label>
+                <input asp-for="MovieDirector" class="form-control" />
+                <span asp-validation-for="MovieDirector" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MovieWriter" class="control-label"></label>
+                <input asp-for="MovieWriter" class="form-control" />
+                <span asp-validation-for="MovieWriter" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MovieStars" class="control-label"></label>
+                <input asp-for="MovieStars" class="form-control" />
+                <span asp-validation-for="MovieStars" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MovieGenres" class="control-label"></label>
+                <input asp-for="MovieGenres" class="form-control" />
+                <span asp-validation-for="MovieGenres" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MovieReleaseDate" class="control-label"></label>
+                <input asp-for="MovieReleaseDate" class="form-control" />
+                <span asp-validation-for="MovieReleaseDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MovieRuntime" class="control-label"></label>
+                <input asp-for="MovieRuntime" class="form-control" />
+                <span asp-validation-for="MovieRuntime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StudioID" class="control-label"></label>
+                <input asp-for="StudioID" class="form-control" />
+                <span asp-validation-for="StudioID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

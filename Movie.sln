@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movie", "Movie\Movie.csproj", "{C2E05D5D-872E-4ACD-B71E-2DA1B07ED7C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movie.Model", "Movie.Model\Movie.Model.csproj", "{5D561548-F5CC-42C8-B565-1E6F60B7C602}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movie.Data", "Movie.Data\Movie.Data.csproj", "{129DA46C-DCCE-4252-9666-911293988C16}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2E05D5D-872E-4ACD-B71E-2DA1B07ED7C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2E05D5D-872E-4ACD-B71E-2DA1B07ED7C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2E05D5D-872E-4ACD-B71E-2DA1B07ED7C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2E05D5D-872E-4ACD-B71E-2DA1B07ED7C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D561548-F5CC-42C8-B565-1E6F60B7C602}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D561548-F5CC-42C8-B565-1E6F60B7C602}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D561548-F5CC-42C8-B565-1E6F60B7C602}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D561548-F5CC-42C8-B565-1E6F60B7C602}.Release|Any CPU.Build.0 = Release|Any CPU
+		{129DA46C-DCCE-4252-9666-911293988C16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{129DA46C-DCCE-4252-9666-911293988C16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{129DA46C-DCCE-4252-9666-911293988C16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{129DA46C-DCCE-4252-9666-911293988C16}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B3113ECA-5660-4F58-8D04-EEA5B01A9942}
+	EndGlobalSection
+EndGlobal
